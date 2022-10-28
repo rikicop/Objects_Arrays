@@ -42,10 +42,10 @@ console.log("Count: ", count)
     {name: "Science", count: 2, textSize: count + 1}
    ]
 */
-let newArray = [];
+let sortedArray = [];
 // {Life: 4, Nature: 1, Science: 2}
 for (let name in count) {
-    newArray.push({ name: name, count: count[name], textSize: count[name] + 5 })
+    sortedArray.push({ name: name, count: count[name], textSize: count[name] + 5 })
 }
-console.log("New Array: ", newArray)
+console.log("New Array: ", sortedArray)
 
