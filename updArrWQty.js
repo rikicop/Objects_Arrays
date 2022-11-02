@@ -1,4 +1,4 @@
-// 2 Doors, 3 Engines, 1 Tire
+// Data Resume : 2 Doors, 3 Engines, 1 Tire
 const data = [
     {
         id: "1",
@@ -31,7 +31,9 @@ const data = [
         price: 200
     },
 ]
+// 1. Original Array
 console.log("Original Array: ", data)
+// 2. Count the number of items in the array
 let count = {};
 data.forEach((item) => {
     count[item.name] = (count[item.name] || 0) + 1; // This kind of syntax is called a "short-circuit" operator
@@ -40,16 +42,17 @@ data.forEach((item) => {
 });
 console.log("Count: ", count)
 
-let sortedArray = [];
+// 3. Create a cart array
+let cartArray = [];
 // {Life: 4, Nature: 1, Science: 2}
 for (let name in count) {
-    sortedArray.push({ name: name, count: count[name], amount: count[name] * data.find(product => product.name === name).price })
+    cartArray.push({ name: name, count: count[name], amount: count[name] * data.find(product => product.name === name).price })
 }
-console.log("New Array: ", sortedArray)
+console.log("Cart: ", cartArray)
 
 //TOTAL
 let total = 0;
-sortedArray.forEach(product => total += product.amount)
+cartArray.forEach(product => total += product.amount)
 console.log("Total: ", total)
 
 //Result:
