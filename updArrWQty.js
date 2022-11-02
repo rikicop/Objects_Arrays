@@ -43,10 +43,16 @@ console.log("Count: ", count)
 let sortedArray = [];
 // {Life: 4, Nature: 1, Science: 2}
 for (let name in count) {
-    sortedArray.push({ name: name, count: count[name] })
+    sortedArray.push({ name: name, count: count[name], amount: count[name] * data.find(product => product.name === name).price })
 }
 console.log("New Array: ", sortedArray)
 
+//TOTAL
+let total = 0;
+sortedArray.forEach(product => total += product.amount)
+console.log("Total: ", total)
+
 //Result:
 // Count:  { Door: 2, Tire: 1, Engine: 3 }
-// New Array:  [ { name: 'Door', count: 2 }, { name: 'Tire', count: 1 }, { name: 'Engine', count: 3 } ]
+// New Array:  [ { name: 'Door', count: 2, amount: 200 }, { name: 'Tire', count: 1, amount: 120 }, { name: 'Engine', count: 3, amount: 600 } ]
+// Total:  920
