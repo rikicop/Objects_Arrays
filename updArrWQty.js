@@ -25,7 +25,7 @@ const data = [
         name: "Engine"
     },
 ]
-
+console.log("Original Array: ", data)
 let count = {};
 data.forEach((item) => {
     count[item.name] = (count[item.name] || 0) + 1; // This kind of syntax is called a "short-circuit" operator
