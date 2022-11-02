@@ -2,27 +2,33 @@
 const data = [
     {
         id: "1",
-        name: "Door"
+        name: "Door",
+        price: 100
     },
     {
         id: "2",
-        name: "Door"
+        name: "Door",
+        price: 100
     },
     {
         id: "3",
-        name: "Tire"
+        name: "Tire",
+        price: 120
     },
     {
         id: "4",
-        name: "Engine"
+        name: "Engine",
+        price: 200
     },
     {
         id: "5",
-        name: "Engine"
+        name: "Engine",
+        price: 200
     },
     {
         id: "6",
-        name: "Engine"
+        name: "Engine",
+        price: 200
     },
 ]
 console.log("Original Array: ", data)
