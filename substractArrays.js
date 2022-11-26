@@ -44,7 +44,7 @@ let cart = [
 
 // Esto va a ocurrir dentro de la API
 // Donde products va a ser el resultado de un mongo fin({})
-// Cart se va a devolver como un array de objeto a travez de un post
+// Cart se va a devolver como un array de objeto a travez de un put
 products.forEach((item, index) => {
     if (item.id === cart[index].id) {
         console.log(item.stock - cart[index].amount);
