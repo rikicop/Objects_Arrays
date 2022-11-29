@@ -17,6 +17,24 @@ let products = [
         "capacity": 5,
         "stock": 8
     },
+    {
+        "id": 5,
+        "name": "Rocket",
+        "color": "red",
+        "type": "station wagon",
+        "registration": new Date('2018-03-03'),
+        "capacity": 5,
+        "stock": 11
+    },
+    {
+        "id": 7,
+        "name": "Wings",
+        "color": "red",
+        "type": "station wagon",
+        "registration": new Date('2018-03-03'),
+        "capacity": 5,
+        "stock": 51
+    },
 ];
 let cart = [
     {
@@ -45,9 +63,19 @@ let cart = [
 // Esto va a ocurrir dentro de la API
 // Donde products va a ser el resultado de un mongo fin({})
 // Cart se va a devolver como un array de objeto a travez de un put
+//shortProducts = products.filter(() => {  })
+
+/* 
 products.forEach((item, index) => {
     if (item.id === cart[index].id) {
         console.log(item.stock - cart[index].amount);
     }
+}) */
+
+cart.forEach((item, index) => {
+    if (item.id === products[index].id) {
+        console.log(products[index].stock - item.amount);
+    }
 })
+
 
