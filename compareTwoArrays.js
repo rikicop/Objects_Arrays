@@ -1,6 +1,6 @@
 let cart = [
-    { "id": 5, "color": "white", "type": "sport", "stock": 7 },
-    { "id": 3, "color": "yellow", "type": "pickup", "stock": 8 },
+    { "id": 5, "color": "white", "type": "sport", "amount": 7 },
+    { "id": 3, "color": "yellow", "type": "pickup", "amount": 8 },
 ]
 
 let autos = [
@@ -15,7 +15,7 @@ console.log("STOCKS DE CARTS")
 autos.forEach(ele => {
     let value = cart.find(val => val.id === ele.id);
     if (value) {
-        console.log(value)
+        console.log(value, value.amount)
     }
 });
 
@@ -24,7 +24,7 @@ console.log("STOCKS DE AUTOS")
 cart.forEach(ele => {
     let value = autos.find(val => val.id === ele.id);
     if (value) {
-        console.log(value)
+        console.log(value, value.stock)
     }
 });
 
